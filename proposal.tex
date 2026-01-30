@@ -58,12 +58,12 @@ The primary model used will be a CNN implemented in PyTorch using transfer learn
 The model will initially be trained by iteration of fine-tuning the final layers, and additional layers may be implemented or unfrozen as full fine-tuning occurs for improved performance. If time permits, an extension of a transformer-based model based on existing models \cite{mdpi2025} to compare performance against the CNN approach when looking at visually similar food categories.
 
 \section*{Baseline Model}
-A simple baseline model will be implemented to help contextualize the performance of the learning model and comparisons. This will consist of a linear classifier (logistic regression/support vector machine) trained on image features such as HOG descriptors or down-sampled pixel values. The baseline does not learn hierarchical visual features and is expected to perform worse CNN; however, the comparison will demonstrate the benefits of the deep learning model.
+A simple baseline model will be implemented to help contextualize the performance of the learning model and comparisons. This will consist of a linear classifier (logistic regression/support vector machine) trained on image features such as HOG descriptors or down-sampled pixel values, similar to the CNN Architecture. The baseline does not learn hierarchical visual features and is expected to perform worse CNN; however, the comparison will demonstrate the benefits of the deep learning model.
 
 \section*{Ethical Considerations}
-Ethical concerns of food recognition lie in incorrect predictions that can be used for health-related and dietary decisions. Misclassifications due to the CNN model could lead to inaccurate calorie and nutritional estimates, which may negatively affect users with restrictions or medical conditions. The dataset used for training may also be biased in terms of cuisine styles and presentation, which reduced performance for underrepresented dishes and cuisines.
+Ethical concerns in food recognition lie in incorrect predictions that may influence health and dietary decisions. Misclassifications by the CNN could lead to inaccurate calorie and nutritional estimates, potentially harming users with restrictions or medical conditions. In addition, training data may be biased towards cuisine styles and presentation, reducing accuracy for underrepresented foods.
 
-Privacy concerns may arise as good images may contain personal information such as faces, locations, and banking information (cards, receipts). Any future deployment of the system should avoid storing images unnecessarily and communicate how any user-input data is processed or stored. The system should be present as a tool rather than as medically accurate information.
+Privacy concerns arise as food images may contain personal information such as faces, locations, or receipts. Any future deployment should minimize image storage and communicate how any user data is handled. The system should be used as a tool rather than a source of medically accurate advice.
 
 \newpage
 \section*{References}
