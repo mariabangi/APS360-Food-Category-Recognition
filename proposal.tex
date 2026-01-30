@@ -61,6 +61,9 @@ The model will initially be trained by iteration of fine-tuning the final layers
 A simple baseline model will be implemented to help contextualize the performance of the learning model and comparisons. This will consist of a linear classifier (logistic regression/support vector machine) trained on image features such as HOG descriptors or down-sampled pixel values. The baseline does not learn hierarchical visual features and is expected to perform worse CNN; however, the comparison will demonstrate the benefits of the deep learning model.
 
 \section*{Ethical Considerations}
+Ethical concerns of food recognition lie in incorrect predictions that can be used for health-related and dietary decisions. Misclassifications due to the CNN model could lead to inaccurate calorie and nutritional estimates, which may negatively affect users with restrictions or medical conditions. The dataset used for training may also be biased in terms of cuisine styles and presentation, which reduced performance for underrepresented dishes and cuisines.
+
+Privacy concerns may arise as good images may contain personal information such as faces, locations, and banking information (cards, receipts). Any future deployment of the system should avoid storing images unnecessarily and communicate how any user-input data is processed or stored. The system should be present as a tool rather than as medically accurate information.
 
 \newpage
 \section*{References}
