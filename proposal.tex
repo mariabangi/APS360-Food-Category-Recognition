@@ -53,6 +53,9 @@ The dataset used for this project will be a publicly available food image datase
 The chosen data set will be split into both training and validation sets to ensure class balance. Pixel values will be normalized using the standard ImageNet statistics. Data augmentation techniques such as cropping, flipping and colour adjustments will be applied to improve the lighting and interview variations. Any corrupted images that are unreadable will be removed during pre-processing, so the image is not input for training, and data quality is improved through error prevention.
 
 \section*{Architecture}
+The primary model used will be a CNN implemented in PyTorch using transfer learning. A pretrained backbone may be used like preexisting models, such as ResNet or EfficientNet, if feasible within the course scope. From existing models, the final classification layer will be replaced with a new fully connected layer that will output probabilities forthe  top food categories as the output. A softmax function will be applied to produce class probabilities, and as a result, training will use cross-entropy loss.
+
+The model will initially be trained by iteration of fine-tuning the final layers, and additional layers may be implemented or unfrozen as full fine-tuning occurs for improved performance. If time permits, an extension of a transformer-based model based on existing models \cite{mdpi2025} to compare performance against the CNN approach when looking at visually similar food categories.
 
 \section*{Baseline Model}
 
