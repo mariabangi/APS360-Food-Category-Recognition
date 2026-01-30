@@ -12,12 +12,12 @@
 \usepackage{microtype}      % microtypography
 \usepackage{xcolor}         % colors
  
-\title{Project Deliverable Template}
+\title{Food Category Recognition}
 
 \author{%
-  First \& Last Name \\
-  Student Number, email\\
-  Link to Google Colab\\
+  Maria Bangi \\
+  1010361519, maria.bangi@mail.utoronto.ca\\
+  GitHub: \url{https://github.com/mariabangi/APS360-Food-Category-Recognition}\\
 }
 
 \begin{document}
@@ -27,15 +27,18 @@
 \vspace{-0.5in}
 
 \section*{Introduction}
+Food recognition software has become increasingly important as applications such as health and diet monitoring become more mainstream, restaurant and delivery services become automated, and accessibility tools are developed for impaired individuals. The ability to accurately categorize food from photographs enables further analysis through calorie estimations, nutritional benefits, and overall improved user interactions on food-related apps and websites. The goal of this project is to develop a deep learning model that will classify food images into predetermined food categories such as 'pizza' and 'pasta'.   
+
+This task is challenging as the visual variations of the food categories heavily differ even within one category of food due to food customizations; contrarily, foods from different categories also look similar in visuals. Small differences in lighting, food presentation, aesthetics and viewpoints all drastically change the food's imagery. Deep learning, through convolutional neural networks (CNNs), has previously demonstrated a strong performance on image classification by its ability to automatically learn significant visual features from raw pixel data given. For this reason, a CNN-based deep learning approach will be suitable and an effective method for food category recognition. This project will aim to train and evaluate a model to then integrate into a future nutritional application that will automatically identify food categories and calorie intake from user-uploaded images.
 
 \section*{Illustration}
-This is how you can reference Figure \ref{fig:sample}.
+The figure below illustrates the architecture of the food category recognition system. Food image inputs are preprocessed and sized before being passed into a CNN that extracts visual features through multiple convolutional and pooling layers. They are flattened and passed through fully connected layers to then have a final output as a probability distribution over the predefined food categories.
 
 \begin{figure}[!h]
   \centering
   \fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-  \caption{Sample figure caption.}
-  \label{fig:sample}
+  \caption{Figure 1: The CNN architecture for food category classification.}
+  \label{fig:FoodRecognitionModel}
 \end{figure}
 
 \section*{Background \& Related Work}
