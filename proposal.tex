@@ -58,6 +58,7 @@ The primary model used will be a CNN implemented in PyTorch using transfer learn
 The model will initially be trained by iteration of fine-tuning the final layers, and additional layers may be implemented or unfrozen as full fine-tuning occurs for improved performance. If time permits, an extension of a transformer-based model based on existing models \cite{mdpi2025} to compare performance against the CNN approach when looking at visually similar food categories.
 
 \section*{Baseline Model}
+A simple baseline model will be implemented to help contextualize the performance of the learning model and comparisons. This will consist of a linear classifier (logistic regression/support vector machine) trained on image features such as HOG descriptors or down-sampled pixel values. The baseline does not learn hierarchical visual features and is expected to perform worse CNN; however, the comparison will demonstrate the benefits of the deep learning model.
 
 \section*{Ethical Considerations}
 
