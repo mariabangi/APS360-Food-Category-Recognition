@@ -30,7 +30,7 @@
 \section*{Introduction}
 Food recognition software has become increasingly important as applications such as health and diet monitoring become more mainstream, restaurant and delivery services become automated, and accessibility tools are developed for impaired individuals. The ability to accurately categorize food from photographs enables further analysis through calorie estimations, nutritional benefits, and overall improved user interactions on food-related apps and websites. The goal of this project is to develop a deep learning model that will classify food images into predetermined food categories such as 'pizza' and 'pasta'.   
 
-This task is challenging as the visual variations of the food categories heavily differ even within one category of food due to food customizations; contrarily, foods from different categories also look similar in visuals. Small differences in lighting, food presentation, aesthetics and viewpoints all drastically change the food's imagery. Deep learning, through convolutional neural networks (CNNs), has previously demonstrated a strong performance on image classification by its ability to automatically learn significant visual features from raw pixel data given. For this reason, a CNN-based deep learning approach will be suitable and an effective method for food category recognition. This project will aim to train and evaluate a model to then integrate into a future nutritional application that will automatically identify food categories and calorie intake from user-uploaded images.
+This task is challenging as the visual variations of the food categories heavily differ even within one category of food due to food customizations; contrarily, foods from different categories also look similar in visuals. Small differences in lighting, food presentation, aesthetics and viewpoints all drastically change the food's imagery. Deep learning, through convolutional neural networks (CNN's), has previously demonstrated a strong performance on image classification by its ability to automatically learn significant visual features from raw pixel data given. For this reason, a CNN-based deep learning approach will be suitable and an effective method for food category recognition. This project will aim to train and evaluate a model to then integrate into a future nutritional application that will automatically identify food categories and calorie intake from user-uploaded images.
 
 \section*{Illustration}
 The figure below illustrates the architecture of the food category recognition system. Food image inputs are preprocessed and sized before being passed into a CNN that extracts visual features through multiple convolutional and pooling layers. They are flattened and passed through fully connected layers to then have a final output as a probability distribution over the predefined food categories.
@@ -43,8 +43,14 @@ The figure below illustrates the architecture of the food category recognition s
 \end{figure}
 
 \section*{Background \& Related Work}
+Deep learning for food recognition has been widely studied in both computer vision and dietary assessment research. One of the most commonly used benchmarks within food recognition is the Food-101 dataset contained 101 different food categories, highlighting challenges in visual variations \cite{kaggle2025}. Early methods of deep learning used colours and shapes for identification and had limited success. With the introduction of CNNs, the approaches had a shift to multitask learning and lightweight learning \cite{mdpi2025}. Deep learning approaches such as Deep Food demonstrated that CNNs were able to significantly improve food recognition accuracy while identifying various food categories in one image and enabling future applications such as calorie estimation \cite{labellerr2025}.
+
+Modern CNN architectures, such as ResNet, introduced layered residual connections that would stabilize training and allow the models to achieve strong performance with classification \cite{sciencedirect2023}. EfficientNet and MnasNet were later used to scale network depth, width and resolution to improve accuracy and make it cost manageable \cite{sciencedirect2023}. Recent models have compared the trade-off between traditional machine learning techniques and deep learning models. The models were then researched in web and mobile based application, where calorie and nutritional facts were assessed \cite{iop2021}. The research motivates the use of a 2-layer CNN-based classifier for robust food category recognition and supports the future implementation of the model.
 
 \section*{Data Processing}
+The dataset used for this project will be a publicly available food image dataset, Food-101 \cite{kaggle2025} used in previous models. To match the goal of food recognition for a nutritional application the full data set allows for 101 food categories and a robust image set. To ensure that data processing remains feasible, the dataset may be cut down to remove repetitive categories and reduce complexity to ensure sufficient samples per class. All images will be resized to a fixed resolution (~ 224×224) and converted to RGB format for consistent inputs.
+
+The chosen data set will be split into both training and validation sets to ensure class balance. Pixel values will be normalized using the standard ImageNet statistics. Data augmentation techniques such as cropping, flipping and color adjustments will be applied to improve the lighting and interview variations. Any corrupted images that are unreadable will be removed during pre-processing so the image is not inputted, and data quality is improved through error prevention.
 
 \section*{Architecture}
 
@@ -54,6 +60,8 @@ The figure below illustrates the architecture of the food category recognition s
 
 \newpage
 \section*{References}
+\bibliographystyle{plain}
+\bibliography{bibliography}
 
 
 \end{document}
