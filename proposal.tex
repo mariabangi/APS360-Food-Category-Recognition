@@ -58,7 +58,7 @@ A CNN implemented in PyTorch using transfer learning will be used. A pretrained 
 The model will initially be trained by iteration of fine-tuning the final layers, and additional layers may be implemented or unfrozen as full fine-tuning occurs for improved performance. If time permits, an extension of a transformer-based model based on existing models \cite{mdpi2025} to compare performance against the CNN approach when looking at visually similar food categories.
 
 \section*{Baseline Model}
-The baseline model will use a logistic regression classifier that is trained on HOG descriptors that are extracted from down-sampled images, similar to the CNN Architecture. The baseline model does not learn hierarchical visual features and is expected to provide a reference point for evaluating the benefit of deep learning and our CNN model.
+The baseline model will use a logistic regression classifier that is trained on HOG descriptors that are extracted from down-sampled images, similar to the CNN Architecture. The baseline model does not learn hierarchical visual features and is expected to provide a reference point for evaluating the benefit of deep learning and the CNN model.
 
 \section*{Ethical Considerations}
 Ethical concerns in food recognition lie in incorrect predictions that may influence health and dietary decisions. Misclassifications by the CNN could lead to inaccurate calorie and nutritional estimates, potentially harming users with restrictions or medical conditions. In addition, training data may be biased towards cuisine styles and presentation, reducing accuracy for underrepresented foods.
